@@ -9,7 +9,7 @@ export class NegociacaoService {
 
   async obterNegociacoesDaSemana() {
     try {
-      const response = await this._http.get("negociacoes/semana");
+      const response = await this._http.get("http://localhost:3000/negociacoes/semana");
       console.log(response);
       return response.map(objeto => new Negociacao(new Date(objeto.data),
         objeto.quantidade, objeto.valor));
@@ -20,7 +20,7 @@ export class NegociacaoService {
 
   async obterNegociacoesSemanaAnterior() {
     try {
-      const response = await this._http.get("negociacoes/anterior");
+      const response = await this._http.get("http://localhost:3000/negociacoes/anterior");
       return response.map(objeto => new Negociacao(new Date(objeto.data),
         objeto.quantidade, objeto.valor));
     } catch (error) {
@@ -30,7 +30,7 @@ export class NegociacaoService {
 
   async obterNegociacoesSemanaRetrasada() {
     try {
-      const response = await this._http.get("negociacoes/retrasada");
+      const response = await this._http.get("http://localhost:3000/negociacoes/retrasada");
       return response.map(objeto => new Negociacao(new Date(objeto.data),
         objeto.quantidade, objeto.valor));
     } catch (error) {
