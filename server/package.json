@@ -1,0 +1,15 @@
+{
+  "name": "jscangaceiro",
+  "version": "1.0.0",
+  "description": "Servidor do projeto cangaceiro javascript",
+  "main": "server.js",
+  "author": "Michael D Silva",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
